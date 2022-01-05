@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FizzBuzz</title>
+    </head>
+    <body>
+        <div>
+        <h1>Fizz Buzz</h1>
+        <input type="number" id="i1" placeholder="Enter any positive number"/>
+        <button onclick ="button()">Click Me</button>
+        <p id= "li"></p>
+        
+    </div>
+        <script>
+            function button(){
+                var num = document.getElementById("i1").value;
+                
+                for (i=1; i<=num;i++){
+                    var li_ref = document.createElement("LI");
+                    li_ref.innerText = i;
+                
+                    if (i%3 == 0 && i%5 == 0){
+                    li_ref.innerText = "FIZZBUZZ";     
+                }
+                else if (i%5 == 0){
+                    li_ref.innerText = "BUZZ"; 
+                }
+                else if (i%3 == 0) {
+                    li_ref.innerText = "FIZZ";  
+                }
+                else {
+                    li_ref.innerText = i; 
+                }
+                let p_ref = document.getElementById("li");
+                    p_ref.appendChild(li_ref);
+            }
+                
+            }
+            
+            
+        </script>
+    </body>
+</html>
